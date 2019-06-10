@@ -1,0 +1,37 @@
+Algorithme ConversionChiffreRomainEnArabe
+
+Variables
+	chiffreRomain, chiffreArabe, LongueurChiffreRomain, i, indiceActuel, indiceSuivant, valeurActuel ,valeurSuivant : entier;
+
+Début
+	chiffreRomain <- Saisie();
+	chiffreArabe <- 0;
+	LongueurChiffreRomain <- taille(chiffreRomain);
+	tableau <- array('I'=>1, 'V'=>5, 'X'=>10, 'L'=>50, 'C'=>100);
+
+	Pour i allant de 0 à LongueurChiffreRomain faire
+		indiceActuel <- i;
+		indiceSuivant <- i+1;		
+
+		Si (indiceSuivant < LongueurChiffreRomain)
+		Alors
+			valeurActuel <- tableau[chiffreRomain[indiceActuel]];
+			valeurSuivant <- tableau[chiffreRomain[indiceSuivant]];	
+
+			Si (valeurSuivant <= valeurActuel) 
+			Alors 
+				chiffreArabe = chiffreArabe + valeurActuel;
+			Sinon 
+				chiffreArabe = chiffreArabe + valeurActuel*(-1);
+			finSi
+		finSi
+		Si (indiceSuivant == LongueurChiffreR) 
+		Alors 
+			chiffreArabe = chiffreArabe + tableau[chiffreRomain[LongueurChiffreRomain -1]];
+		finSi
+
+		i <- i+1;
+	fin pour
+
+	Ecrire(chiffreArabe);
+Fin
