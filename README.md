@@ -1,2 +1,2 @@
 # ConversionChiffreRomainEnArabe
-repository créé spécialement l'activité "PARTAGEZ UN REPOSITORY SUR GITHUB"
+repository créé spécialement pour l'activité "PARTAGEZ UN REPOSITORY SUR GITHUB"
